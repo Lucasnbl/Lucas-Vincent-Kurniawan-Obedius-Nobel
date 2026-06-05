@@ -29,6 +29,7 @@ import {
 } from 'lucide-react';
 import { ThemeType, Criterion, Alternative } from './types';
 import { calculateTOPSIS, calculateWASPAS, calculateCombined } from './utils/math';
+import { INITIAL_ALTERNATIVES } from './data/rukoDataset';
 
 // 6 criteria defined in the prompt for strategically expanding business via Ruko expansion
 const CRITERIA: Criterion[] = [
@@ -38,35 +39,6 @@ const CRITERIA: Criterion[] = [
   { id: 'C4', code: 'C4', name: 'Keamanan Lingkungan', type: 'benefit', description: 'Tingkat keamanan lingkungan dari kemalingan, premanisme, sengketa lahan, dll (skala 1-5, 5 berarti sangat aman & damai).' },
   { id: 'C5', code: 'C5', name: 'Jumlah Kompetitor Sekitar', type: 'cost', description: 'Kepadatan kompetitor bidang usaha serupa dalam radius 1 Km (Unit). Semakin sedikit kompetitor sejenis, ruang pasar terbuka lebih besar.' },
   { id: 'C6', code: 'C6', name: 'Potensi Ekonomi Warga', type: 'benefit', description: 'Daya beli dan tingkat penghasilan rata-rata populasi warga di wilayah sekitar ruko (skala 1-5, skor 5 menggambarkan kelas ekonomi tinggi).' }
-];
-
-// Initial realistic default candidate locations
-const INITIAL_ALTERNATIVES: Alternative[] = [
-  {
-    id: 'alt1',
-    name: 'Ruko Margonda Corridor',
-    scores: { C1: 85, C2: 82, C3: 4, C4: 4, C5: 7, C6: 4 }
-  },
-  {
-    id: 'alt2',
-    name: 'Ruko Sudirman Business Hub',
-    scores: { C1: 220, C2: 95, C3: 5, C4: 5, C5: 14, C6: 5 }
-  },
-  {
-    id: 'alt3',
-    name: 'Ruko Gading Serpong Boulevard',
-    scores: { C1: 140, C2: 88, C3: 4, C4: 5, C5: 6, C6: 5 }
-  },
-  {
-    id: 'alt4',
-    name: 'Ruko Dago Sentra Kreatif',
-    scores: { C1: 95, C2: 74, C3: 4, C4: 4, C5: 3, C6: 4 }
-  },
-  {
-    id: 'alt5',
-    name: 'Ruko Outer Ringroad Transit',
-    scores: { C1: 55, C2: 48, C3: 2, C4: 3, C5: 2, C6: 3 }
-  }
 ];
 
 // Initial direct weights scale 1-10
