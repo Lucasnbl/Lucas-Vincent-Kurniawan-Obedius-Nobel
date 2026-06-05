@@ -1,6 +1,6 @@
 {
-  "name": "SPK Saluran Penjualan Digital AHP-TOPSIS",
-  "description": "Aplikasi Sistem Pendukung Keputusan penentuan saluran penjualan digital terbaik menggunakan metode kombinasi AHP (Analytic Hierarchy Process) dan TOPSIS.",
+  "name": "SPK Pemilihan Ruko",
+  "description": "Sistem Pendukung Keputusan Pemilihan Ruko Strategis menggunakan metode AHP, TOPSIS, dan WASPAS.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
